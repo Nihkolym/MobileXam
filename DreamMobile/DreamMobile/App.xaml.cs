@@ -12,7 +12,7 @@ namespace DreamMobile
         {
             InitializeComponent();
 
-            MainPage = new RegisterPage();
+            MainPage = new NavigationPage(new RegisterPage());
         }
 
         protected override void OnStart()

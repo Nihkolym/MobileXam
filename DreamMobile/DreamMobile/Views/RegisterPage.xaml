@@ -7,8 +7,10 @@
         <viewModels:RegisterViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout Orientation="Vertical">
-        
+    <StackLayout Orientation="Vertical"
+                  VerticalOptions="CenterAndExpand" 
+                  HorizontalOptions="CenterAndExpand">
+
         <Entry Text="{Binding Email}" 
                Placeholder="Email"/>
         <Entry Text="{Binding Password}"
@@ -17,10 +19,12 @@
         <Entry Text="{Binding ConfirmPassword}" 
                Placeholder="Confirm Password"
                IsPassword="True"/>
-        
-        <Button Command="{Binding RegisterCommand}"
-                Text="Register"/>   
 
-        <Label Text="{Binding Message}" />
+        <Button Command="{Binding RegisterCommand}"
+                Text="Register"/>
+
+        <Button Text="Go to login Page"
+                Clicked="Button_Clicked_1"/>
+
     </StackLayout>
 </ContentPage>
