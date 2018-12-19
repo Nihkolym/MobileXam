@@ -2,12 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:DreamMobile.ViewModels"
+<<<<<<< HEAD
              x:Class="DreamMobile.Views.LoginPage">
+=======
+             x:Class="DreamMobile.Views.LoginPage"
+             xmlns:behaviors ="clr-namespace:DreamMobile.Validators">
+>>>>>>> origin/master
 
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
 
+<<<<<<< HEAD
     <StackLayout Orientation="Vertical"
                  VerticalOptions="CenterAndExpand" 
                  HorizontalOptions="CenterAndExpand">
@@ -21,6 +27,45 @@
                 Text="Login"/>
 
         <Button Text="Register"
+=======
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="Center" 
+                 Padding="30"
+                 Spacing="30">
+
+        <Entry Text="{Binding Username}"
+               x:Name="EmailEntry"
+               Placeholder="Email"
+               FontSize="30">
+            <Entry.Behaviors>
+                <behaviors:EmailValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
+        <Entry Text="{Binding Password}"
+               x:Name="PasswordEntry"
+               IsPassword="True"
+               Placeholder="Password"
+               FontSize="30">
+            <Entry.Behaviors>
+                <behaviors:PasswordValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
+        <Label x:Name="ErrorLable"
+               FontSize="Medium"
+               TextColor="Red"/>
+        
+        <Button Command="{Binding LoginCommand}"
+                Text="Login"
+                TextColor="White"
+                BackgroundColor="DodgerBlue"
+                FontSize="30"
+                Clicked="Button_Clicked_1"/>
+
+        <Button Text="Go to registration"
+>>>>>>> origin/master
                 Clicked="Button_Clicked"/>
     </StackLayout>
 

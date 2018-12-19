@@ -9,6 +9,10 @@
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     </StackLayout>
 
 </ContentPage>

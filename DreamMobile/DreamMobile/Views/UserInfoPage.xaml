@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:DreamMobile.ViewModels"
+             x:Class="DreamMobile.Views.UserInfoPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:UserInfoViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Username"
+                   FontSize="Medium"
+                   TextColor="Green"/>
+            <Label Text="{Binding Username}" />
+            <Label Text="{Binding Sickness}"
+                   FontSize="Medium"
+                   TextColor="Green"/>
+            <Picker x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged" FontSize="Medium">
+                <Picker.Items>
+                    <x:String>Headache</x:String>
+                    <x:String>Stomachache</x:String>
+                    <x:String>Rheum</x:String>
+                    <x:String>Stress</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="{Binding Gender}"
+                   TextColor="Green"
+                   FontSize="Medium"/>
+            <Picker x:Name="genderPicker" SelectedIndexChanged="GenderPicker_SelectedIndexChanged" SelectedItem="Male" FontSize="Medium">
+                <Picker.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

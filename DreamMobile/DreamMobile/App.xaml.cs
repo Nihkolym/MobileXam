@@ -1,7 +1,15 @@
 ﻿using Dream.Views;
+<<<<<<< HEAD
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+=======
+using DreamMobile.Views;
+using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using DreamMobile.Helpers;
+>>>>>>> origin/master
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace DreamMobile
@@ -12,7 +20,18 @@ namespace DreamMobile
         {
             InitializeComponent();
 
+<<<<<<< HEAD
             MainPage = new NavigationPage(new RegisterPage());
+=======
+            if (Settings.AccessToken != "")
+            {
+                MainPage = new NavigationPage(new DetailPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new RegisterPage());
+            }
+>>>>>>> origin/master
         }
 
         protected override void OnStart()

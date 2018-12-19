@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DreamMobile.ViewModels"
+             x:Class="DreamMobile.Views.TipsPage"
+             Title="TipsPage">
+    <ContentPage.BindingContext>
+        <vm:TipsViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Greeting}"
+                VerticalOptions="Center" FontSize="Medium" />
+            <Label Text="DesiresTemperature" 
+                   x:Name="DesiresTemperatureTextLabel"
+                   FontSize="Large" 
+                   BackgroundColor="Red"
+                   VerticalOptions="Center"/>
+            
+            <Label FontSize="Large" 
+                   x:Name="DesiresTemperatureLabel"
+                   BackgroundColor="Red" 
+                   VerticalOptions="Center"/>
+            
+            <Label Text="DesiresHumidity (%)" 
+                   x:Name="DesiresHumidityTextLabel"
+                   FontSize="Large"
+                   BackgroundColor="Aqua"
+                   VerticalOptions="Center"/>
+            
+            <Label FontSize="Large"
+                   x:Name="DesiresHumidityLabel"
+                   BackgroundColor="Aqua" 
+                   VerticalOptions="Center"/>
+
+            <Label Text="Tips:" FontSize="Large"/>
+            <Label Text="Close your eyes and rest, Massage your neck and temples,Warm up your neck Try putting a heating pad or a warm cloth around your neck and the base of your skull to ease tension headaches, Relax. Minimize stress.Watch what you eat and drink." FontSize="Micro"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
