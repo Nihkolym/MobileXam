@@ -10,21 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-=======
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
     <PackageReference Include="Xam.Plugins.Notifier" Version="3.0.1" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
->>>>>>> origin/master
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <ProjectReference Include="..\..\HealthyDream\HealthyDream.csproj" />
   </ItemGroup>
 
@@ -35,18 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
->>>>>>> origin/master
     <Compile Update="Views\RegisterPage.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <EmbeddedResource Update="Views\LoginPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-=======
     <EmbeddedResource Update="Views\DetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -65,6 +56,5 @@
     <EmbeddedResource Update="Views\UserInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
->>>>>>> origin/master
   </ItemGroup>
 </Project>
